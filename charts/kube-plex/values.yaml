@@ -2,15 +2,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 image:
-  repository: plexinc/pms-docker
-  tag: 1.16.0.1226-7eb2c8f6f
+  repository: linuxserver/plex
+  tag: latest
   pullPolicy: IfNotPresent
 
 kubePlex:
   enabled: true
   image:
-    repository: quay.io/munnerz/kube-plex
-    tag: latest
+    repository: recogio/kube-plex
+    tag: vs
     pullPolicy: Always
 
 # Override this with the plex claim token from plex.tv/claim
@@ -61,7 +61,7 @@ rbac:
   ## serviceAccountName: ""
 
 nodeSelector:
-  beta.kubernetes.io/arch: amd64
+  beta.kubernetes.io/arch: arm
 
 persistence:
   transcode:

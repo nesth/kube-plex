@@ -1,3 +1,3 @@
-FROM alpine:3.6
+FROM arm32v7/alpine
 
-ADD kube-plex_linux_amd64 /kube-plex
+ADD kube-plex_linux_arm /kube-plex
