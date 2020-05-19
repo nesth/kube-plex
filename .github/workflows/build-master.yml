@@ -1,4 +1,4 @@
-name: Build Maste
+name: Build Master
 on:
   push:
     branches:
@@ -19,7 +19,6 @@ jobs:
 
       - name: Build Go Binary
         run: |
-          go mod init github.com/munnerz/kube-plex
           CGO_ENABLED=0 GOOS=linux GOOARCH=arm go build -a -installsuffix cgo -o kube-plex_linux_arm
 
       - name: Build Docker Image
