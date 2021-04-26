@@ -19,7 +19,7 @@ jobs:
 
       - name: Build Go Binary
         run: |
-          CGO_ENABLED=0 GOOS=linux GOOARCH=arm go build -a -installsuffix cgo -o kube-plex_linux_arm
+          CGO_ENABLED=0 GOOS=linux GOOARCH=arm64 go build -a -installsuffix cgo -o kube-plex_linux_arm
 
       - name: Build Docker Image
         run: docker build -t recogio/kube-plex:sample .
